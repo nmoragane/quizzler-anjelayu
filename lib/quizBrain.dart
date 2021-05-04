@@ -15,7 +15,7 @@ class QuizBrain {
   //
   // Question q1 = Question(q: 'You can lead a cow down stairs but not up stairs.', a: false,)
 
-  List<Question> questionBank = [
+  List<Question> _questionBank = [
     Question('You can lead a cow down stairs but not up stairs.', false),
     Question('Approximately one quarter of human bones are in the feet.', true),
     Question('A slug\'s blood is green.', false),
@@ -45,4 +45,12 @@ class QuizBrain {
         'In West Virginia, USA, if you accidentally hit an animal with your car, you are free to take it home to eat.',
         true),
   ];
+
+  String getQuestionText(int questionNumber) {
+    return _questionBank[questionNumber].questionText;
+  }
+
+  bool getQuestionAnswer(int questionNumber) {
+    return _questionBank[questionNumber].questionAnswer;
+  }
 }
